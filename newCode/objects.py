@@ -9,7 +9,6 @@ from math import fabs
 import time
 
 from functions import *
-#from variables import *
 
 class initial():
 	def __init__(self):
@@ -81,7 +80,7 @@ class Bullet():
 class Character():
 	def __init__(self,init):
 		self.bullet_here=False
-		self.hit_sound=pygame.mixer.Sound('../sounds/punch2.wav')	
+		self.hit_sound=pygame.mixer.Sound('../sounds/punch2.ogg')	
 		self.hit_sound.set_volume(1)
 		self.blood=pygame.image.load('../images/blood.png').convert_alpha()
 		self.width=self.blood.get_width()
@@ -163,7 +162,6 @@ class Player(Character):
 
 
 	def shoot(self,screen,init):
-		#global ccc
 		if event.type == KEYDOWN and event.key == K_SPACE:
 			self.init_bullet()
 		if self.bullet_here:
@@ -212,12 +210,12 @@ class IntroScreen():
 		self.choosing=True
 		self.level=False
 		self.time=0	
-		self.song=pygame.mixer.Sound('../music/introOutro2.wav')
+		self.song=pygame.mixer.Sound('../music/introOutro2.ogg')
 		self.song.set_volume(0.5)
-		self.outro=pygame.mixer.Sound('../music/shesHornyRemX.wav')
+		self.outro=pygame.mixer.Sound('../music/shesHornyRemX.ogg')
 		self.outro.set_volume(0.15)
-		self.bet=pygame.mixer.Sound('../music/outro1.wav')
-		self.opening_song=pygame.mixer.Sound('../music/introOutro1.wav')
+		self.bet=pygame.mixer.Sound('../music/outro1.ogg')
+		self.opening_song=pygame.mixer.Sound('../music/introOutro1.ogg')
 		self.opening_bool=True
 		self.cover=pygame.image.load('../images/cover.png').convert()
 		self.cover_width=self.cover.get_width()
@@ -234,7 +232,6 @@ class IntroScreen():
 	def opening(self,screen,font,init):
 		self.opening_song.play()
 		screen.blit(self.cover,(0,0))
-		#screen.blit(font.render('KIKE GAME', True, (250,0,0)),(500*init.factor.x,400*init.factor.y))
 		if event.type == KEYUP and event.key == K_SPACE:
 			self.level=True
 			self.opening_song.stop()

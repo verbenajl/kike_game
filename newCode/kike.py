@@ -1,5 +1,8 @@
 ###	main file for kikeGame
 
+
+
+
 import pygame
 from pygame.locals import *
 from sys import exit, argv
@@ -11,10 +14,8 @@ import time
 
 from functions import *
 
-#from variables import *
 from objects import *
 from enemies import *
-#from screens import *
 
 n=4
 clock = pygame.time.Clock()
@@ -77,7 +78,6 @@ def im_beaten_enem(play,enem):
 		play.game_time =0
 		enem.health=enem.h
 
-#	play.game_time += time_passed	
 	
 
 def im_beaten_play(play, enem):
@@ -95,7 +95,6 @@ def im_beaten_play(play, enem):
 		play.pos = Vector2(250,250)
 
 
-#        play.game_time += time_passed
 	
 
 def the_game(play, enem):
@@ -188,14 +187,7 @@ while True:
 		introScreen.closing(screenO,font3,init)
 		introScreen.outro.play()
 
-	#screenc=pygame.transform.scale(screenO, init.SCREEN_SIZE)
-        #screenb.blit(screenc,(0,0))
 
-
-
-#	screenO.blit(font3.render(str((dispInfo.current_w,dispInfo.current_h)),True,(0,0,0)),(100,800))
-#	screenO.blit(font3.render(str(introScreen.level),True,(0,0,0)),(100,900))
-#	screenO.blit(font3.render(str(introScreen.ymove),True,(0,0,0)),(100,1000))
 
 
 

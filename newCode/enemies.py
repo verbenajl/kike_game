@@ -10,7 +10,6 @@ import time
 
 from functions import *
 
-#from variables import *
 from objects import *
 
 class Monse(Player):
@@ -29,7 +28,6 @@ class Monse(Player):
                 self.center=Vector2(self.pos.x+self.width/2,self.pos.y+self.height/2)
 		self.image=pygame.transform.scale(self.image,(int(self.width*init.factor.x),
 		int(self.height*init.factor.y)))
-                #self.bar_pos=Vector2(1200,900)
                 self.h=self.health
 		self.name='monse'
 		self.image_win=pygame.transform.scale(self.image,(int(300*init.factor.x),
@@ -49,7 +47,6 @@ class Kike(Player):
                 self.width=self.image.get_width()
                 self.height=self.image.get_height()
                 self.center=Vector2(self.pos.x+self.width/2,self.pos.y+self.height/2)
-                #self.bar_pos=Vector2(1200,900)
 		self.image=pygame.transform.scale(self.image,(int(self.width*init.factor.x),
 		int(self.height*init.factor.y)))
                 self.h=self.health
@@ -74,7 +71,6 @@ class Bebe(Player):
             	self.center=Vector2(self.pos.x+self.width/2,self.pos.y+self.height/2)
 		self.image=pygame.transform.scale(self.image,(int(self.width*init.factor.x),
 		int(self.height*init.factor.y)))
-                #self.bar_pos=Vector2(1200,20)
                 self.h=self.health
 		self.name='bebe'
 		self.image_win=pygame.transform.scale(self.image,(int(300*init.factor.x),
@@ -95,7 +91,6 @@ class JL(Player):
 		self.center=Vector2(self.pos.x+self.width/2,self.pos.y+self.height/2)
 		self.image=pygame.transform.scale(self.image,(int(self.width*init.factor.x),
 		int(self.height*init.factor.y)))
-		#self.bar_pos=Vector2(50,900)
 		self.h=self.health
 		self.name='JL'
 	
@@ -122,7 +117,7 @@ class Cholo(Enemy):
 		int(self.height*init.factor.y)))
 		
 		self.name='cholo'
-		self.song=pygame.mixer.Sound('../music/03amanda.wav')
+		self.song=pygame.mixer.Sound('../music/03amanda.ogg')
 		self.song.set_volume(0.15)
 
 	def move(self,init):
@@ -172,7 +167,7 @@ class JLL(Cholo):
 		self.right=False
 		self.left=False
 		self.name='JL'
-		self.song=pygame.mixer.Sound('../music/01onemealX.wav')
+		self.song=pygame.mixer.Sound('../music/01onemealX.ogg')
 		self.song.set_volume(0.15)
 	
 	def down_left(self):
@@ -265,7 +260,7 @@ class Ramon(Cholo):
 		self.up=False
 		self.name='ramon'	
 		self.shoot_speed=15
-		self.song=pygame.mixer.Sound('../music/vampGalX.wav')
+		self.song=pygame.mixer.Sound('../music/vampGalX.ogg')
 		self.song.set_volume(0.15)
 
 	def allFalse(self,dire1,dire2,dire3,dire4):
